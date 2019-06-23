@@ -10,6 +10,9 @@ $emailSMTPServer = "outlook.office365.com"
 # Aktiverar Verbose logg. Standardvärde är silentlyContinue
 $VerbosePreference = "Continue"
 
+# Vem ska mailet med loggen skickas ifrån.
+$LogEmailFromAddress = "info@landvetterscout.se"
+
 # Vem ska mailet med loggen skickas till.
 $LogEmailToAddress = "karl.thoren@landvetterscout.se"
 
@@ -28,7 +31,7 @@ $LicenseAssignment=@{
 # Skapa ett konfigurationsobjekt och koppla licenshantering och vilken scoutnet maillist som hanterar användarnas konton.
 $conf = New-SNSConfiguration -LicenseAssignment $LicenseAssignment -UserSyncMailListId "5004"
 
-# Vem ska mailet med loggen skickas ifrån.
+# Vem ska mailet till nya användare skickas ifrån.
 $conf.EmailFromAddress = "info@landvetterscout.se"
 
 # Domännam för scoutkårens office 365.
@@ -156,7 +159,6 @@ Mvh
 Landvetter Scoutkår
 "@
 
-
 # Standardsignatur för nya användare. Textvariant.
 $conf.SignatureText=@"
 Med vänliga hälsningar
@@ -234,39 +236,59 @@ try
 {
     # Hämtar senaste körningens hash.
     $ValidationHash = Get-AutomationVariable -Name 'ScoutnetMailListsHash' -ErrorAction "Stop"
+    if ([string]::IsNullOrWhiteSpace($ValidationHash))
+    {
+        # Får inte vara en tom sträng.
+        $ValidationHash = "Tom."
+    }
 }
 Catch
 {
     Write-SNSLog -Level "Error" "Kunde inte hämta variabeln ScoutnetMailListsHash. Error $_"
-    throw
 }
 
-try
+if (![string]::IsNullOrWhiteSpace($ValidationHash))
 {
     # Kör updateringsfunktionen.
-    # Först uppdatera användare.
-    Invoke-SNSUppdateOffice365User -Configuration $conf
+    try
+    {
+        # Först uppdatera användare.
+        Invoke-SNSUppdateOffice365User -Configuration $conf
+    }
+    Catch
+    {
+        Write-SNSLog -Level "Error" "Kunde inte köra uppdateringen av användare. Fel: $_"
+    }
 
-    # Sen uppdatera maillistor.
-    $NewValidationHash = SNSUpdateExchangeDistributionGroups -Configuration $conf -ValidationHash $ValidationHash
-}
-Catch
-{
-    Write-SNSLog -Level "Error" "Kunde inte köra uppdateringen. Error $_"
-}
+    try
+    {
+        # Sen uppdatera maillistor.
+        $NewValidationHash = SNSUpdateExchangeDistributionGroups -Configuration $conf -ValidationHash $ValidationHash
+    }
+    Catch
+    {
+        Write-SNSLog -Level "Error" "Kunde inte köra uppdateringen av distributionsgrupper. Fel: $_"
+    }
 
-try
-{
-    # Spara hashen till nästa körning.
-    Set-AutomationVariable -Name 'ScoutnetMailListsHash' -Value $NewValidationHash -ErrorAction "Continue"
-}
-Catch
-{
-    Write-SNSLog -Level "Error" "Kunde inte spara variabeln ScoutnetMailListsHash. Error $_"
+    if ([string]::IsNullOrWhiteSpace($NewValidationHash))
+    {
+        # Får inte vara en tom sträng.
+        $NewValidationHash = "Tom."
+    }
+
+    try
+    {
+        # Spara hashen till nästa körning.
+        Set-AutomationVariable -Name 'ScoutnetMailListsHash' -Value $NewValidationHash -ErrorAction "Continue"
+    }
+    Catch
+    {
+        Write-SNSLog -Level "Error" "Kunde inte spara variabeln ScoutnetMailListsHash. Error $_"
+    }
 }
 
 # Skapa ett mail med loggen och skicka till admin.
 $bodyData = Get-Content -Path $conf.LogFilePath -Raw -Encoding UTF8 -ErrorAction "Continue"
-Send-MailMessage -Credential $conf.Credential365 -From $conf.EmailFromAddress `
+Send-MailMessage -Credential $conf.Credential365 -From $LogEmailFromAddress `
     -To $LogEmailToAddress -Subject $LogEmailSubject -Body $bodyData `
     -SmtpServer $conf.EmailSMTPServer -Port $conf.SmtpPort -UseSSL -Encoding UTF8 -ErrorAction "Continue"
