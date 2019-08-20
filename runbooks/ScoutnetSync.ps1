@@ -54,8 +54,8 @@ $conf.MailListSettings = @{
     };
     "lainfo" = @{
         "scoutnet_list_id"= "4989";
-        "scouter_synk_option" = "p"; # Bara primär i scoutnet.
-        "ledare_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
+        "scouter_synk_option" = "&"; # Office 365 adresser och primär i scoutnet.
+        "ledare_synk_option" = "&"; # Office 365 adresser och primär i scoutnet.
         "email_addresses" = "";  # Lista med e-postadresser.
         "ignore_user" = "3109304";
     };
@@ -74,19 +74,19 @@ $conf.MailListSettings = @{
     "krypen" = @{
         "scoutnet_list_id"= "4900";
         "scouter_synk_option" = ""; # Alla adresser
-        "ledare_synk_option" = "@"; # Bara office 365 adresser
+        "ledare_synk_option" = "&"; # Office 365 adresser och primär i scoutnet.
         "email_addresses" = "karl.thoren@landvetterscout.se";
     };
     "ravarna" = @{
         "scoutnet_list_id"= "4904";
         "scouter_synk_option" = ""; # Alla adresser
-        "ledare_synk_option" = "@"; # Bara office 365 adresser
+        "ledare_synk_option" = "&"; # Office 365 adresser och primär i scoutnet.
         "email_addresses" = "karl.thoren@landvetterscout.se";
     };
     "spararledare@landvetterscout.se" = @{
         "scoutnet_list_id"= "5012";
-        "scouter_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
-        "ledare_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
+        "scouter_synk_option" = "&"; # Office 365 adresser och primär i scoutnet.
+        "ledare_synk_option" = "&"; # Office 365 adresser och primär i scoutnet.
         "email_addresses" = "karl.thoren@landvetterscout.se";
     };
     "upptackarledare@landvetterscout.se" = @{
