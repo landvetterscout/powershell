@@ -46,12 +46,6 @@ $conf.MailListSettings = @{
         "ledare_synk_option" = "@"; # Synkoption för ledare. Giltiga värden är @,-,t eller &.
         "email_addresses" = "karl.thoren@landvetterscout.se";  # Lista med e-postadresser.
     };
-    "gbg2019deltagare" = @{
-        "scoutnet_list_id"= "4990";
-        "scouter_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
-        "ledare_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
-        "email_addresses" = "karl.thoren@landvetterscout.se";  # Lista med e-postadresser.
-    };
     "lainfo" = @{
         "scoutnet_list_id"= "4989";
         "scouter_synk_option" = "&"; # Office 365 adresser och primär i scoutnet.
