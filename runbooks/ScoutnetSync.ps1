@@ -51,7 +51,7 @@ $conf.MailListSettings = @{
         "scouter_synk_option" = "p&"; # Office 365 adresser och primär i scoutnet.
         "ledare_synk_option" = "&"; # Office 365 adresser och primär i scoutnet.
         "email_addresses" = "";  # Lista med e-postadresser.
-        "ignore_user" = "3109304";
+        "ignore_user" = "3109304", "3149407";
     };
     "rovdjuren" = @{
         "scoutnet_list_id"= "4923";
