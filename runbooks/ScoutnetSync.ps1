@@ -1,11 +1,8 @@
 ﻿#Requires -Version 5.1
-#Requires -Modules @{ ModuleName="Office365-Scoutnet-synk"; ModuleVersion="0.2.0" }
+#Requires -Modules @{ ModuleName="Office365-Scoutnet-synk"; ModuleVersion="0.3.0" }
 
 # Lämplig inställning i Azure automation.
 $ProgressPreference = "silentlyContinue"
-
-# Server att skicka mail via.
-$emailSMTPServer = "outlook.office365.com"
 
 # Aktiverar Verbose logg. Standardvärde är silentlyContinue
 $VerbosePreference = "Continue"
@@ -151,6 +148,16 @@ Har du frågor så skicka de till it@landvetterscout.se
 
 Mvh
 Landvetter Scoutkår
+"@
+
+# Texten i det automatiska svaret, om man skickar brev till medlem som slutat.
+$conf.DisabledAccountsAutoReplyText=@"
+<html><body>
+<DisplayName> är inte längre medlem i Landvetter scoutkår.<br>
+Skicka din fråga till info@landvetterscout.se så kommer vi försöka att svara på den.<br>
+Mvh<br>
+Landvetter Scoutkår
+</body></html>
 "@
 
 # Standardsignatur för nya användare. Textvariant.
