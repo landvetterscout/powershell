@@ -41,7 +41,7 @@ $conf.MailListSettings = @{
         "scoutnet_list_id"= "4924"; # Listans Id i Scoutnet.
         "scouter_synk_option" = ""; # Synkoption för scouter. Giltiga värden är p,f,a,t eller tomt.
         "ledare_synk_option" = "@"; # Synkoption för ledare. Giltiga värden är @,-,t eller &.
-        "email_addresses" = "karl.thoren@landvetterscout.se";  # Lista med e-postadresser.
+        "email_addresses" = "";  # Lista med e-postadresser.
     };
     "lainfo" = @{
         "scoutnet_list_id"= "4989";
@@ -52,50 +52,50 @@ $conf.MailListSettings = @{
     };
     "rovdjuren" = @{
         "scoutnet_list_id"= "4923";
-        "scouter_synk_option" = ""; # Alla adresser
-        "ledare_synk_option" = "@"; # Bara office 365 adresser
-        "email_addresses" = "karl.thoren@landvetterscout.se";
+        "scouter_synk_option" = ""; # Alla adresser.
+        "ledare_synk_option" = "@"; # Bara office 365 adresser.
+        "email_addresses" = "";
     };
     "upptackare" = @{
         "scoutnet_list_id"= "4922";
-        "scouter_synk_option" = ""; # Alla adresser
-        "ledare_synk_option" = "@"; # Bara office 365 adresser
-        "email_addresses" = "karl.thoren@landvetterscout.se";
+        "scouter_synk_option" = ""; # Alla adresser.
+        "ledare_synk_option" = "@"; # Bara office 365 adresser.
+        "email_addresses" = "";
     };
     "krypen" = @{
         "scoutnet_list_id"= "4900";
-        "scouter_synk_option" = ""; # Alla adresser
-        "ledare_synk_option" = "&"; # Office 365 adresser och primär i scoutnet.
-        "email_addresses" = "karl.thoren@landvetterscout.se";
+        "scouter_synk_option" = ""; # Alla adresser.
+        "ledare_synk_option" = "@"; # Bara office 365 adresser.
+        "email_addresses" = "";
     };
     "ravarna" = @{
         "scoutnet_list_id"= "4904";
-        "scouter_synk_option" = ""; # Alla adresser
-        "ledare_synk_option" = "&"; # Office 365 adresser och primär i scoutnet.
-        "email_addresses" = "karl.thoren@landvetterscout.se";
+        "scouter_synk_option" = ""; # Alla adresser.
+        "ledare_synk_option" = "@"; # Bara office 365 adresser.
+        "email_addresses" = "";
     };
     "spararledare@landvetterscout.se" = @{
         "scoutnet_list_id"= "5012";
-        "scouter_synk_option" = "p&"; # Office 365 adresser och primär i scoutnet.
-        "ledare_synk_option" = "&"; # Office 365 adresser och primär i scoutnet.
-        "email_addresses" = "";
+        "scouter_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
+        "ledare_synk_option" = "@"; # Bara office 365 adresse.
+        "email_addresses" = "karl.thoren@landvetterscout.se";
     };
     "upptackarledare@landvetterscout.se" = @{
         "scoutnet_list_id"= "5013";
-        "scouter_synk_option" = "p&"; # Föredra office 365 adresser för primär i scoutnet.
-        "ledare_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
+        "scouter_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
+        "ledare_synk_option" = "@"; # Bara office 365 adresser.
         "email_addresses" = "";
     };
     "aventyrarledare@landvetterscout.se" = @{
         "scoutnet_list_id"= "5014";
-        "scouter_synk_option" = "p&"; # Föredra office 365 adresser för primär i scoutnet.
-        "ledare_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
+        "scouter_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
+        "ledare_synk_option" = "@"; # Bara office 365 adresser.
         "email_addresses" = "";
     };
     "utmanarledare@landvetterscout.se" = @{
         "scoutnet_list_id"= "5015";
-        "scouter_synk_option" = "p&"; # Föredra office 365 adresser för primär i scoutnet.
-        "ledare_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
+        "scouter_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
+        "ledare_synk_option" = "@"; # Bara office 365 adresser.
         "email_addresses" = "";
     };
 }
