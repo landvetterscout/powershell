@@ -76,37 +76,37 @@ $conf.MailListSettings = @{
     };
     "spararledare@landvetterscout.se" = @{
         "scoutnet_list_id"= "5012";
-        "scouter_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
+        "scouter_synk_option" = "tp"; # Föredra office 365 adresser för primär i scoutnet.
         "ledare_synk_option" = "@"; # Bara office 365 adresse.
         "email_addresses" = "";
     };
     "ledare-krypen@landvetterscout.se" = @{
         "scoutnet_list_id"= "10923";
-        "scouter_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
+        "scouter_synk_option" = "tp"; # Föredra office 365 adresser för primär i scoutnet.
         "ledare_synk_option" = "@"; # Bara office 365 adresse.
         "email_addresses" = "";
     };
     "ledare-ravarna@landvetterscout.se" = @{
         "scoutnet_list_id"= "10924";
-        "scouter_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
+        "scouter_synk_option" = "tp"; # Föredra office 365 adresser för primär i scoutnet.
         "ledare_synk_option" = "@"; # Bara office 365 adresse.
         "email_addresses" = "";
     };
     "upptackarledare@landvetterscout.se" = @{
         "scoutnet_list_id"= "5013";
-        "scouter_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
+        "scouter_synk_option" = "tp"; # Föredra office 365 adresser för primär i scoutnet.
         "ledare_synk_option" = "@"; # Bara office 365 adresser.
         "email_addresses" = "";
     };
     "aventyrarledare@landvetterscout.se" = @{
         "scoutnet_list_id"= "5014";
-        "scouter_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
+        "scouter_synk_option" = "tp"; # Föredra office 365 adresser för primär i scoutnet.
         "ledare_synk_option" = "@"; # Bara office 365 adresser.
         "email_addresses" = "";
     };
     "utmanarledare@landvetterscout.se" = @{
         "scoutnet_list_id"= "5015";
-        "scouter_synk_option" = "t"; # Föredra office 365 adresser för primär i scoutnet.
+        "scouter_synk_option" = "tp"; # Föredra office 365 adresser för primär i scoutnet.
         "ledare_synk_option" = "@"; # Bara office 365 adresser.
         "email_addresses" = "";
     };
