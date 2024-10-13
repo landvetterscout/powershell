@@ -136,7 +136,8 @@ Ditt användarnamn är: <UserPrincipalName>
 Ditt temporära lösenord är: <Password>
 Lösenordet måste bytas första gången du loggar in.
 
-Du kan logga in på Office 365 på https://portal.office.com för att komma åt din nya mailbox.
+Du kan logga in på Office 365 på https://www.microsoft365.com för att komma åt din nya mailbox.
+Outlook hittar du på https://outlook.office.com
 
 Har du frågor så skicka de till it@landvetterscout.se
 
@@ -158,7 +159,7 @@ Du har en e-post adress <UserPrincipalName> som du kan använda för att skicka 
 Länkar som är bra att hålla koll på:
 Landvetter scoutkårs sharepoint: https://landvetterscout.sharepoint.com
 Praktisk info: https://landvetterscout.sharepoint.com/Delade%20dokument/K%C3%A5rdokument/Praktisk%20info
-Ledarinstruktionen: https://landvetterscout.sharepoint.com/Styrelsen/Dokument/Uppdragsbeskrivningar/Ledarinstruktion
+Kårhandboken: https://landvetterscout.sharepoint.com/Delade%20dokument/K%C3%A5rdokument/PM/K%C3%A5rhandboken.pdf
 Hemsidan: https://landvetterscout.se
 Scoutnet: https://www.scoutnet.se
 
