@@ -37,6 +37,12 @@ $conf.DomainName = "landvetterscout.se"
 # Hashtable med id på Office 365 distributionsgruppen som nyckel. 
 # Distributions grupper som är med här kommer att synkroniseras.
 $conf.MailListSettings = @{
+    "rover@landvetterscout.se" = @{
+        "scoutnet_list_id"= "13491";
+        "scouter_synk_option" = "p&"; # Office 365 adresser och primär i scoutnet.
+        "ledare_synk_option" = "@"; # Office 365 adresser.
+        "email_addresses" = "";  # Lista med e-postadresser.
+    };
     "utmanarna" = @{ # Namet på distributions gruppen i office 365. Används som grupp ID till Get-DistributionGroupMember.
         "scoutnet_list_id"= "4924"; # Listans Id i Scoutnet.
         "scouter_synk_option" = ""; # Synkoption för scouter. Giltiga värden är p,f,a,t eller tomt.
@@ -256,6 +262,13 @@ Catch
 {
     Write-SNSLog -Level "Error" "Kunde inte hämta variabeln ScoutnetMailListsHash. Error $_"
 }
+
+#Connect-AzAccount -Identity -ErrorAction "Stop" |out-null
+#$token = (Get-AzAccessToken -ResourceTypeName MSGraph -ErrorAction "Stop").token
+#Connect-MgGraph -AccessToken $token -ErrorAction "Stop" |out-null
+
+
+#Connect-ExchangeOnline -ManagedIdentity -Organization $conf.DomainName -ShowBanner:$false -CommandName $conf.commandNames -Verbose:$false -ErrorAction "Stop"
 
 try
 {
