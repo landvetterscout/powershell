@@ -116,6 +116,12 @@ $conf.MailListSettings = @{
         "ledare_synk_option" = "@"; # Bara office 365 adresser.
         "email_addresses" = "";
     };
+    "avdelningsledare@landvetterscout.se" = @{
+        "scoutnet_list_id"= "15030";
+        "scouter_synk_option" = "tp"; # Föredra office 365 adresser för primär i scoutnet.
+        "ledare_synk_option" = "@"; # Bara office 365 adresser.
+        "email_addresses" = "";
+    };
 }
 
 # Gruppnamn för alla ledare. Gruppen måste skapas i office 365 innan den kan användas här.
