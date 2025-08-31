@@ -56,6 +56,13 @@ $conf.MailListSettings = @{
         "email_addresses" = "";  # Lista med e-postadresser.
         "ignore_user" = "3109304", "3149407"; # Användare som inte vill ha mail ifrån lainfo.
     };
+    "over18@landvetterscout.se" = @{
+        "scoutnet_list_id"= "16218";
+        "scouter_synk_option" = "p&"; # Office 365 adresser och primär i scoutnet.
+        "ledare_synk_option" = "&"; # Office 365 adresser och primär i scoutnet.
+        "email_addresses" = "";  # Lista med e-postadresser.
+        "ignore_user" = "3109304", "3149407"; # Användare som inte vill ha mail ifrån lainfo.
+    };
     "rovdjuren" = @{
         "scoutnet_list_id"= "4923";
         "scouter_synk_option" = ""; # Alla adresser.
