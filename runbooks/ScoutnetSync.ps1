@@ -18,10 +18,10 @@ $LogEmailSubject = "Maillist sync log"
 
 # Konfiguration av modulen.
 
-# Licenseer för standardkonto.
+# Licenseer för standardkonto. O365_BUSINESS_ESSENTIALS == Microsoft 365 Business Basic.
 $LicenseAssignment=@{
-    "STANDARDPACK" = @(
-        "YAMMER_ENTERPRISE", "SWAY","Deskless","POWERAPPS_O365_P1");
+    "O365_BUSINESS_ESSENTIALS" = @(
+        "YAMMER_ENTERPRISE", "SWAY");
         "FLOW_FREE"=""
 }
 
