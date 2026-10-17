@@ -277,13 +277,6 @@ Catch
     Write-SNSLog -Level "Error" "Kunde inte hämta variabeln ScoutnetMailListsHash. Error $_"
 }
 
-#Connect-AzAccount -Identity -ErrorAction "Stop" |out-null
-#$token = (Get-AzAccessToken -ResourceTypeName MSGraph -ErrorAction "Stop").token
-#Connect-MgGraph -AccessToken $token -ErrorAction "Stop" |out-null
-
-
-#Connect-ExchangeOnline -ManagedIdentity -Organization $conf.DomainName -ShowBanner:$false -CommandName $conf.commandNames -Verbose:$false -ErrorAction "Stop"
-
 try
 {
     # Logga in på office 365
