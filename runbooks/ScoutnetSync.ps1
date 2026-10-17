@@ -18,11 +18,11 @@ $LogEmailSubject = "Maillist sync log"
 
 # Konfiguration av modulen.
 
-# Licenseer för standardkonto. O365_BUSINESS_ESSENTIALS == Microsoft 365 Business Basic.
+# Licenseer för standardkonto.
 $LicenseAssignment=@{
     "O365_BUSINESS_ESSENTIALS" = @(
         "YAMMER_ENTERPRISE", "SWAY");
-        "FLOW_FREE"=""
+        "FLOW_FREE" = @()
 }
 
 # Skapa ett konfigurationsobjekt och koppla licenshantering och vilken scoutnet maillist som hanterar användarnas konton.
